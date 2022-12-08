@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from '@testing-library/react-native';
+import {render} from 'test-utils';
 import {StarRating} from '../StarRating';
 
 describe('StarRating', () => {
@@ -21,7 +21,7 @@ describe('StarRating', () => {
 
   describe('rating was NOT passing', () => {
     it('return nothing', () => {
-      const {container} = render(<StarRating />);
+      const {container} = render(<StarRating />, {wrapper: undefined});
 
       expect(container.children).toEqual([]);
     });

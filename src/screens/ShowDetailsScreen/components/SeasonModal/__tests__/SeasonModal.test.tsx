@@ -1,10 +1,10 @@
 import React, {createRef} from 'react';
-import {render, act, fireEvent} from '@testing-library/react-native';
+import {act, fireEvent, render} from 'test-utils';
 import {SeasonModal} from '../SeasonModal';
 import {Modalize} from 'react-native-modalize';
 
 const modalizeRef = createRef<Modalize>();
-describe('', () => {
+describe('SeasonModal', () => {
   test('show all season option', () => {
     const {getAllByText} = render(
       <SeasonModal
